@@ -1,2 +1,0 @@
-python manage.py runserver # run application
-python manage.py migrate # To migrate models change

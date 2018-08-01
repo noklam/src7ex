@@ -14,8 +14,8 @@ class Airport(models.Model):
 class Flight(models.Model):
     origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="departures") # If I access Airport, I can call departures directly without handling the relation myself.
     destination = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="arrivals")
-    duration = models.IntegerField(max_length=length)
+    duration = models.IntegerField()
     
-    def _str__(self):
-        return f"{self.id} - {self.origin} to {self.destjination}"        
+    def __str__(self):
+        return f"{self.id} - {self.origin} to {self.destination}"        
     

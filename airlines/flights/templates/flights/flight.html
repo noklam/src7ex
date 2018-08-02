@@ -6,11 +6,10 @@
 <body>
     <h1>Flights {{ flight.id }}</h1>
     <ul>
-        {% for flight in flights %}
             <li>Origin: {{ flight.origin }}</li>         
             <li>Destination: {{ flight.destination }}</li>        
-        {% endfor %}
     </ul>
+    <a href="{% url 'index' %}"> Back to full listing</a>
     
 </body>
 </html>

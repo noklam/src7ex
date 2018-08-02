@@ -18,4 +18,4 @@ from django.urls import path, include
 
 urlpatterns = [
     path('',include('flights.urls')), # add this line so Django know where to find urls, default is airlines/urls
-    path('admin/', admin.site.urls)]
+    path('admin/', admin.site.urls)]  # build-in

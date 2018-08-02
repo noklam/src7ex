@@ -9,7 +9,7 @@ class Airport(models.Model):
     # name = models.CharField(max_length=length)
 
     def __str__(self):
-        return f"{self.city} {self.code} "
+        return f"{self.city} ({self.code}) "
 
 class Flight(models.Model):
     origin = models.ForeignKey(Airport, on_delete=models.CASCADE, related_name="departures") # If I access Airport, I can call departures directly without handling the relation myself.

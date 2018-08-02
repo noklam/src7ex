@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="UTF-8">
-    <title>Flight</title>
-</head>
-<body>
-    <h1>Flights</h1>
-    <ul>
-        {% for flight in flights %}
-            <li>
-                <a href="{% url 'flight' flight.id %}"> Flight No: {{ flight.id }}, {{flight.origin}} to {{flight.destination}}</a>
-         </li>
-        {% endfor %}
-    </ul>
-    
-</body>
-</html>
+{% extends "flights/base.html" %}
+
+{% block title %}
+    Flights
+{% endblock title %}
+{% block body %}
+<h1>Flights</h1>
+<ul>
+    {% for flight in flights %}
+        <li>
+            <a href="{% url 'flight' flight.id %}">{{ flight.id }} - {{flight.origin}} to {{flight.destination}}</a>
+     </li>
+    {% endfor %}
+</ul>
+{% endblock body  %}

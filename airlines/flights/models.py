@@ -6,7 +6,7 @@ length = 64
 class Airport(models.Model):
     code = models.CharField(max_length=3)
     city = models.CharField(max_length=64)
-    name = models.CharField(max_length=length)
+    # name = models.CharField(max_length=length)
 
     def __str__(self):
         return f"{self.city} {self.code} "
